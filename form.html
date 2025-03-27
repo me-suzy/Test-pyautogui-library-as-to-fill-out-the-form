@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Test pentru Automatizare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formular de Test</h1>
+    <form id="test-form">
+        <div class="form-group">
+            <label for="nume">Nume și prenume:</label>
+            <input type="text" id="nume" name="nume" placeholder="Introduceți numele complet">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Introduceți adresa de email">
+        </div>
+
+        <div class="form-group">
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Introduceți numărul de telefon">
+        </div>
+
+        <div class="form-group">
+            <label for="categorie">Categorie:</label>
+            <select id="categorie" name="categorie">
+                <option value="" disabled selected>Selectați o categorie</option>
+                <option value="personal">Personal</option>
+                <option value="profesional">Profesional</option>
+                <option value="educatie">Educație</option>
+                <option value="altele">Altele</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subcategorie">Subcategorie:</label>
+            <select id="subcategorie" name="subcategorie">
+                <option value="" disabled selected>Selectați o subcategorie</option>
+                <option value="programare">Programare</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="vanzari">Vânzări</option>
+                <option value="altele">Altele</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mesaj">Mesaj:</label>
+            <textarea id="mesaj" name="mesaj" placeholder="Introduceți mesajul dumneavoastră"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="termeni" name="termeni">
+                Sunt de acord cu termenii și condițiile
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                Doresc să mă abonez la newsletter
+            </label>
+        </div>
+
+        <button type="submit" id="submit-button">Trimite formular</button>
+        <button type="reset" id="reset-button" style="background-color: #e74c3c; margin-left: 10px;">Resetează</button>
+    </form>
+
+    <script>
+        // Previne trimiterea formularului (pentru testare)
+        document.getElementById('test-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Formular trimis cu succes!');
+            
+            // Afișează valorile introduse în consolă
+            console.log({
+                nume: document.getElementById('nume').value,
+                email: document.getElementById('email').value,
+                telefon: document.getElementById('telefon').value,
+                categorie: document.getElementById('categorie').value,
+                subcategorie: document.getElementById('subcategorie').value,
+                mesaj: document.getElementById('mesaj').value,
+                termeni: document.getElementById('termeni').checked,
+                newsletter: document.getElementById('newsletter').checked
+            });
+        });
+    </script>
+</body>
+</html>

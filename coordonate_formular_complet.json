@@ -1,0 +1,50 @@
+{
+    "c\u00e2mp_nume": [
+        65.99,
+        48.98
+    ],
+    "c\u00e2mp_email": [
+        65.62,
+        51.57
+    ],
+    "c\u00e2mp_telefon": [
+        65.83,
+        50.56
+    ],
+    "dropdown_categorie": [
+        68.75,
+        51.11
+    ],
+    "op\u021biune_personal_din_categorie": [
+        70.36,
+        51.2
+    ],
+    "dropdown_subcategorie": [
+        69.9,
+        50.56
+    ],
+    "op\u021biune_programare_din_subcategorie": [
+        72.14,
+        50.65
+    ],
+    "textarea_mesaj": [
+        65.05,
+        49.63
+    ],
+    "checkbox_termeni": [
+        69.38,
+        50.19
+    ],
+    "checkbox_newsletter": [
+        69.06,
+        50.28
+    ],
+    "buton_trimite": [
+        66.09,
+        50.09
+    ],
+    "buton_reseteaz\u0103": [
+        66.46,
+        49.44
+    ]
+}
